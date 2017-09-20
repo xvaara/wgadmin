@@ -15,6 +15,17 @@ Vue.component('icon', Icon)
 import VModal from 'vue-js-modal'
 Vue.use(VModal)
 
+var body = document.body
+var wrapper = document.createElement('span')
+wrapper.className = 'adminWrapper'
+
+wrapper.innerHTML = body.innerHTML
+body.innerHTML = wrapper.outerHTML
+
+var div = document.createElement('div')
+div.id = 'app'
+document.body.appendChild(div)
+
 /* eslint-disable no-new */
 window.admin = new Vue({
   el: '#app',
