@@ -35,7 +35,7 @@
     <div class="dropdown" v-if="config.newContentTabs" v-for="item in config.newContentTabs">
         <button class="dropbtn"><icon :name="item.icon || 'plus'"></icon> {{ item.title }}</button>      <div class="dropdown-content">
         <span v-for="subitem in item.items">
-          <a class="link" :href="subitem.url" v-if="subitem.url"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
+          <a class="link" :href="'?' + subitem.url" v-if="subitem.url"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
           <p class="dropdown-title" v-else> {{ subitem.title }}</p>
         </span>
       </div>
@@ -141,10 +141,17 @@ export default {
     window.frames['view'] = window
   },
   destroyed () {
-    var elems = document.getElementsByClassName('adminOn')
+    var elems = document.getElementsByClassName('wg-admin-toolbar')
     var i = elems.length
     while (i--) {
-      elems[i].style.display = 'none'
+      // elems[i].style.display = 'none'
+      elems[i].removeChild(elems[i].firstChild)
+    }
+    elems = document.getElementsByClassName('draggable')
+    i = elems.length
+    while (i--) {
+      // elems[i].style.display = 'none'
+      elems[i].parentNode.removeChild(elems[i])
     }
   },
   methods: {
