@@ -16,8 +16,8 @@
       <button class="dropbtn"><icon name="cog"></icon>Versiontags</button>
       <div class="dropdown-content">
         <span v-for="subitem in versionTags">
-          <a class="link" :href="subitem.joinUrl"><img :src="subitem['icon']" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.name }}</a>
-          <a class="link" :href="subitem.editUrl">[edit]</a>
+          <a class="link" :href="subitem.joinUrl"><img :src="subitem['icon']" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.name }}
+          <a class="versionedit" :href="subitem.editUrl">[edit]</a></a>
         </span>
       </div>
     </div>
@@ -198,6 +198,18 @@ export default {
     padding: 0px 6px;
     text-decoration: none;
     display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.versionjoin {
+  width: 70% !important;
+  display: inline !important;
+}
+.versionedit {
+  width: 30% !important;
+  display: inline !important;
+  float: right;
 }
 
 .dropdown-title {

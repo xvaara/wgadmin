@@ -2,7 +2,7 @@
 <span>
   <div ref="adminElement" id="adminElement">
     <div ref="dragAdmin" id="dragAdmin"><icon name="arrows"></icon></div>
-    <div class="adminButton" @click="showBar = !showBar">ADMIN</div>
+    <div class="adminButton" @click.prevent="showBar = !showBar">ADMIN</div>
     <panels v-if="showBar" :config="config" :clipboard="clipboard" :versionTags="versionTags" :currentAsset="currentAsset"></panels>
   </div>
     <modal name="edit" width="80%" height="80%" :resizable="true">
@@ -36,7 +36,7 @@ export default {
     this.$refs.dragAdmin.addEventListener('mousedown', this.mouseDown, false)
     window.addEventListener('mouseup', this.mouseUp, false)
     this.$refs.adminElement.style.top = '60px'
-    this.$refs.adminElement.style.left = '60px'
+    this.$refs.adminElement.style.left = '0px'
     window.adminEdit = () => {
       this.$modal.show('edit')
     }
@@ -96,8 +96,8 @@ export default {
     color: #ccc;
     /* height: 32px; */
     position: fixed;
-    top: 30;
-    left: 30;
+    top: 60;
+    left: 0;
     /* width: 100%; */
     /* min-width: 600px; */
     z-index: 99999;
@@ -107,6 +107,7 @@ export default {
 .adminButton {
     padding: 8px;
     font-size: 16px;
+    cursor: pointer;
 }
 #adminElement div {
   float: left;
