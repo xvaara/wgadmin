@@ -3,7 +3,7 @@
   <div ref="adminElement" id="adminElement">
     <div ref="dragAdmin" id="dragAdmin"><icon name="arrows"></icon></div>
     <div class="adminButton" @click="showBar = !showBar">ADMIN</div>
-    <bar v-if="showBar"></bar>
+    <bar v-if="showBar" :config="config"></bar>
   </div>
     <modal name="edit" width="80%" height="80%" :resizable="true">
       <iframe src="http://mhx.fi/wgadmin/edit.html" frameborder="0" width="100%" height="100%"></iframe>
@@ -14,6 +14,8 @@
 <script>
 import Bar from './components/Bar'
 
+import axios from 'Axios'
+
 var pos = {}
 
 export default {
@@ -23,7 +25,8 @@ export default {
   },
   data () {
     return {
-      showBar: false
+      showBar: false,
+      config: {}
     }
   },
   mounted () {
@@ -34,6 +37,9 @@ export default {
     window.adminEdit = () => {
       this.$modal.show('edit')
     }
+    axios.get('/?op=admin&json=1').then((res) => {
+      this.config = res.data
+    })
   },
   methods: {
     mouseUp () {

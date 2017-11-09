@@ -8,9 +8,21 @@
 # install dependencies
 npm install
 
+# start webgui
+docker run -i -p 80:80 -t scrottie/webgui8:latest
+```
+
+# add the js to a style template
+``` html
+<script src="http://localhost:8080/_assets/app.js"></script>
+```
+
+``` bash
 # serve with hot reload at localhost:8080
 npm run dev
+```
 
+``` bash
 # build for production with minification
 npm run build
 

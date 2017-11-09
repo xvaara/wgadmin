@@ -1,104 +1,670 @@
 {
-    "items": [
+    "profileUrl": "\/?op=account;module=profile;do=view;uid=3",
+    "logoutUrl": "\/?op=auth;method=logout",
+    "username": "Admin",
+    "viewUrl": "\/",
+    "backToSiteUrl": "\/",
+    "homeUrl": "\/home",
+    "assetTypes": "37\/64",
+    "newContentTabs": [
         {
-            "title": "Console",
-            "icon": "cog",
             "items": [
-                {"href": "/etusivu?op=viewActiveSessions",                    "icon": "http://www.webgui.org/extras/adminConsole/small/activeSessions.gif",     "title": "Active Sessions"},
-                {"href": "http://www.webgui.org/addons",                      "icon": "http://www.webgui.org/extras/adminConsole/small/addons.png",             "title": "Addons"},
-                {"href": "/etusivu?op=manageAdSpaces",                        "icon": "http://www.webgui.org/extras/adminConsole/small/advertising.gif",        "title": "Advertising"},
-                {"href": "/etusivu?op=assetHistory",                          "icon": "http://www.webgui.org/extras/adminConsole/small/assetHistory.gif",       "title": "Asset History"},
-                {"href": "/etusivu?op=assetManager",                          "icon": "http://www.webgui.org/extras/adminConsole/small/assets.gif",             "title": "Assets"},
-                {"href": "/etusivu?op=manageCache",                           "icon": "http://www.webgui.org/extras/adminConsole/small/cache.gif",              "title": "Cache"},
-                {"href": "/etusivu?func=manageClipboard",                     "icon": "http://www.webgui.org/extras/adminConsole/small/clipboard.gif",          "title": "Clipboard"},
-                {"href": "/etusivu?op=listReplacements",                      "icon": "http://www.webgui.org/extras/adminConsole/small/contentFilters.gif",     "title": "Content Filters"},
-                {"href": "/etusivu?func=manageMetaData",                      "icon": "http://www.webgui.org/extras/adminConsole/small/contentProfiling.gif",   "title": "Content Profiling"},
-                {"href": "/etusivu?op=listDatabaseLinks",                     "icon": "http://www.webgui.org/extras/adminConsole/small/databases.gif",          "title": "Databases"},
-                {"href": "/etusivu?op=filePump",                              "icon": "http://www.webgui.org/extras/adminConsole/small/filePump.png",           "title": "File Pump"},
-                {"href": "/etusivu?op=listGraphicsOptions",                   "icon": "http://www.webgui.org/extras/adminConsole/small/graphics.gif",           "title": "Graphics"},
-                {"href": "/etusivu?op=listGroups",                            "icon": "http://www.webgui.org/extras/adminConsole/small/groups.gif",             "title": "Groups"},
-                {"href": "/etusivu?op=viewInbox",                             "icon": "http://www.webgui.org/extras/adminConsole/small/inbox.gif",              "title": "Inbox"},
-                {"href": "/etusivu?op=listLDAPLinks",                         "icon": "http://www.webgui.org/extras/adminConsole/small/ldap.gif",               "title": "LDAP Connections"},
-                {"href": "/etusivu?op=viewLoginHistory",                      "icon": "http://www.webgui.org/extras/adminConsole/small/loginHistory.gif",       "title": "Login History"},
-                {"href": "/etusivu?op=passiveAnalytics;func=editRuleflow",    "icon": "http://www.webgui.org/extras/adminConsole/small/passiveAnalytics.png",   "title": "Passive Analytics"},
-                {"href": "/etusivu?op=manageCron",                            "icon": "http://www.webgui.org/extras/adminConsole/small/cron.gif",               "title": "Scheduler"},
-                {"href": "/etusivu?op=editSettings",                          "icon": "http://www.webgui.org/extras/adminConsole/small/settings.gif",           "title": "Settings"},
-                {"href": "/etusivu?shop=admin",                               "icon": "http://www.webgui.org/extras/adminConsole/small/shop.gif",               "title": "Shop"},
-                {"href": "/etusivu?op=spectreStatus",                         "icon": "http://www.webgui.org/extras/adminConsole/small/spectre.gif",            "title": "Spectre"},
-                {"href": "/etusivu?op=viewStatistics",                        "icon": "http://www.webgui.org/extras/adminConsole/small/statistics.gif",         "title": "Statistics"},
-                {"href": "/etusivu?op=viewHelpIndex",                         "icon": "http://www.webgui.org/extras/adminConsole/small/help.gif",               "title": "Template Help"},
-                {"href": "/etusivu?func=manageTrash",                         "icon": "http://www.webgui.org/extras/adminConsole/small/trash.gif",              "title": "Trash"},
-                {"href": "/etusivu?op=switchOffAdmin",                        "icon": "http://www.webgui.org/extras/adminConsole/small/adminConsoleOff.gif",    "title": "Turn admin off."},
-                {"href": "/etusivu?op=editProfileSettings",                   "icon": "http://www.webgui.org/extras/adminConsole/small/userProfiling.gif",      "title": "User Profiling"},
-                {"href": "/etusivu?op=listUsers",                             "icon": "http://www.webgui.org/extras/adminConsole/small/users.gif",              "title": "Users"},
-                {"href": "/etusivu?op=manageVersions",                        "icon": "http://www.webgui.org/extras/adminConsole/small/versionTags.gif",        "title": "Version Tags"},
-                {"href": "/etusivu?op=manageWorkflows",                       "icon": "http://www.webgui.org/extras/adminConsole/small/workflow.gif",           "title": "Workflow"}
+                {
+                    "title": "Article",
+                    "fields": {
+                        
+                    },
+                    "icon": "\/extras\/assets\/small\/article.gif",
+                    "category": "basic",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Article",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/article.gif"
+                },
+                {
+                    "title": "Calendar",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/calendar.gif",
+                    "category": "basic",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/calendar.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Calendar"
+                },
+                {
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/dataForm.gif",
+                    "category": "basic",
+                    "icon_full": "\/extras\/assets\/dataForm.gif",
+                    "uiLevel": 5,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::DataForm",
+                    "title": "Data Form"
+                },
+                {
+                    "title": "DataTable",
+                    "icon_full": "\/extras\/assets\/DataTable.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::DataTable",
+                    "icon": "\/extras\/assets\/small\/DataTable.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "basic"
+                },
+                {
+                    "isContainer": 1,
+                    "canAdd": "WebGUI::Asset",
+                    "category": "basic",
+                    "icon_full": "\/extras\/assets\/folder.gif",
+                    "uiLevel": 5,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Folder",
+                    "title": "Folder",
+                    "icon": "\/extras\/assets\/small\/folder.gif"
+                },
+                {
+                    "category": "basic",
+                    "icon": "\/extras\/assets\/small\/maps.png",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Map",
+                    "icon_full": "\/extras\/assets\/maps.png",
+                    "uiLevel": 1,
+                    "title": "Map"
+                },
+                {
+                    "isContainer": 1,
+                    "category": "basic",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Layout",
+                    "icon_full": "\/extras\/assets\/layout.gif",
+                    "uiLevel": 1,
+                    "title": "Page Layout",
+                    "fields": {
+                        
+                    },
+                    "icon": "\/extras\/assets\/small\/layout.gif"
+                },
+                {
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/poll.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Poll",
+                    "icon": "\/extras\/assets\/small\/poll.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "basic",
+                    "title": "Poll"
+                },
+                {
+                    "title": "Search",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Search",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/search.gif",
+                    "category": "basic",
+                    "icon": "\/extras\/assets\/small\/search.gif",
+                    "canAdd": "WebGUI::Asset"
+                },
+                {
+                    "category": "basic",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::Snippet",
+                    "uiLevel": 5,
+                    "icon_full": "\/extras\/assets\/snippet.gif",
+                    "title": "Snippet",
+                    "fields": {
+                        
+                    },
+                    "icon": "\/extras\/assets\/small\/snippet.gif"
+                }
+            ],
+            "id": "basic",
+            "title": "Basic"
+        },
+        {
+            "title": "Community",
+            "id": "community",
+            "items": [
+                {
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/collaboration.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Collaboration",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/collaboration.gif",
+                    "category": "community",
+                    "title": "Collaboration System"
+                },
+                {
+                    "title": "Gallery",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Gallery",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/photoGallery.gif",
+                    "category": "community",
+                    "icon": "\/extras\/assets\/small\/photoGallery.gif",
+                    "canAdd": "WebGUI::Asset"
+                },
+                {
+                    "icon": "\/extras\/assets\/small\/matrix.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "community",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/matrix.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Matrix",
+                    "title": "Matrix"
+                },
+                {
+                    "category": "community",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::MessageBoard",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/messageBoard.gif",
+                    "isContainer": 1,
+                    "icon": "\/extras\/assets\/small\/messageBoard.gif",
+                    "title": "Message Board"
+                },
+                {
+                    "title": "Newsletter",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/newsletter.gif",
+                    "category": "community",
+                    "icon_full": "\/extras\/assets\/newsletter.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Collaboration::Newsletter"
+                },
+                {
+                    "isContainer": 1,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::StoryArchive",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/storyarchive.gif",
+                    "category": "community",
+                    "canAdd": "WebGUI::Asset",
+                    "title": "Story Archive",
+                    "icon": "\/extras\/assets\/small\/storyarchive.gif"
+                },
+                {
+                    "title": "Story Topic",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::StoryTopic",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/storytopic.gif",
+                    "category": "community",
+                    "icon": "\/extras\/assets\/small\/storytopic.gif",
+                    "canAdd": "WebGUI::Asset"
+                },
+                {
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/survey.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Survey",
+                    "icon": "\/extras\/assets\/small\/survey.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "community",
+                    "title": "Survey (beta)"
+                },
+                {
+                    "icon": "\/extras\/assets\/small\/wikiMaster.gif",
+                    "title": "Wiki",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/wikiMaster.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::WikiMaster",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "community",
+                    "isContainer": 1
+                }
             ]
         },
         {
-            "title": "New Content",
-            "icon": "plus",
+            "title": "Intranet",
+            "id": "intranet",
             "items": [
-                {"title": "Basic"},
-                {"title": "Article", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Article", "icon": "http://www.webgui.org/extras/assets/small/article.gif"},
-                {"title": "Calendar", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Calendar", "icon": "http://www.webgui.org/extras/assets/small/calendar.gif"},
-                {"title": "Data Form", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::DataForm", "icon": "http://www.webgui.org/extras/assets/small/dataForm.gif"},
-                {"title": "DataTable", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::DataTable", "icon": "http://www.webgui.org/extras/assets/small/DataTable.gif"},
-                {"title": "File Pile", "href": "/etusivu?func=add;class=WebGUI::Asset::FilePile", "icon": "http://www.webgui.org/extras/assets/small/filePile.gif"},
-                {"title": "Folder", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Folder", "icon": "http://www.webgui.org/extras/assets/small/folder.gif"},
-                {"title": "Map", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Map", "icon": "http://www.webgui.org/extras/assets/small/maps.png"},
-                {"title": "Page Layout", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Layout", "icon": "http://www.webgui.org/extras/assets/small/layout.gif"},
-                {"title": "Poll", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Poll", "icon": "http://www.webgui.org/extras/assets/small/poll.gif"},
-                {"title": "Search", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Search", "icon": "http://www.webgui.org/extras/assets/small/search.gif"},
-                {"title": "Snippet", "href": "/etusivu?func=add;class=WebGUI::Asset::Snippet", "icon": "http://www.webgui.org/extras/assets/small/snippet.gif"},
-                {"title": "Community"},
-                {"title": "Collaboration System", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Collaboration", "icon": "http://www.webgui.org/extras/assets/small/collaboration.gif"},
-                {"title": "Gallery", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Gallery", "icon": "http://www.webgui.org/extras/assets/small/photoGallery.gif"},
-                {"title": "Matrix", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Matrix", "icon": "http://www.webgui.org/extras/assets/small/matrix.gif"},
-                {"title": "Message Board", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::MessageBoard", "icon": "http://www.webgui.org/extras/assets/small/messageBoard.gif"},
-                {"title": "Newsletter", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Collaboration::Newsletter", "icon": "http://www.webgui.org/extras/assets/small/newsletter.gif"},
-                {"title": "Story Archive", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::StoryArchive", "icon": "http://www.webgui.org/extras/assets/small/storyarchive.gif"},
-                {"title": "Story Topic", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::StoryTopic", "icon": "http://www.webgui.org/extras/assets/small/storytopic.gif"},
-                {"title": "Survey (beta)", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Survey", "icon": "http://www.webgui.org/extras/assets/small/survey.gif"},
-                {"title": "Wiki", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::WikiMaster", "icon": "http://www.webgui.org/extras/assets/small/wikiMaster.gif"},
-                
-                {"title": "Intranet"},
-                {"title": "Dashboard (beta)", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Dashboard", "icon": "http://www.webgui.org/extras/assets/small/dashboard.gif"},
-                
-                {"title": "In/Out Board", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::InOutBoard", "icon": "http://www.webgui.org/extras/assets/small/iob.gif"},
-                {"title": "MultiSearch", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::MultiSearch", "icon": "http://www.webgui.org/extras/assets/small/multiSearch.gif"},
-                {"title": "Project Manager (beta)", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::ProjectManager", "icon": "http://www.webgui.org/extras/assets/small/projManagement.gif"},
-                {"title": "Stock Data", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::StockData", "icon": "http://www.webgui.org/extras/assets/small/stockData.gif"},
-                {"title": "Thingy", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Thingy", "icon": "http://www.webgui.org/extras/assets/small/thingy.gif"},
-                {"title": "Time Tracker (beta)", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::TimeTracking", "icon": "http://www.webgui.org/extras/assets/small/timetrack.gif"},
-                {"title": "User List", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::UserList", "icon": "http://www.webgui.org/extras/assets/small/userlist.gif"},
-                {"title": "WeatherData", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::WeatherData", "icon": "http://www.webgui.org/extras/assets/small/weatherData.gif"},
-                {"title": "Prototypes"},
-                {"title": "Artikkeli tietopankki", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Article;prototype=lo0v6Bv9tNh8U1yAQsaxoA", "icon": "http://www.webgui.org/extras/assets/small/article.gif"},
-                {"title": "Shop"},
-                {"title": "Ad Sales", "href": "/etusivu?func=add;class=WebGUI::Asset::Sku::Ad", "icon": "http://www.webgui.org/extras/assets/small/adsku.gif"},
-                {"title": "Donation", "href": "/etusivu?func=add;class=WebGUI::Asset::Sku::Donation", "icon": "http://www.webgui.org/extras/assets/small/Donation.gif"},
-                {"title": "Event Manager", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::EventManagementSystem", "icon": "http://www.webgui.org/extras/assets/small/ems.gif"},
-                {"title": "Flat Discount Coupon", "href": "/etusivu?func=add;class=WebGUI::Asset::Sku::FlatDiscount", "icon": "http://www.webgui.org/extras/assets/small/FlatDiscount.gif"},
-                {"title": "Product", "href": "/etusivu?func=add;class=WebGUI::Asset::Sku::Product", "icon": "http://www.webgui.org/extras/assets/small/product.gif"},
-                {"title": "Shelf", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Shelf", "icon": "http://www.webgui.org/extras/assets/small/Shelf.gif"},
-                {"title": "Subscription", "href": "/etusivu?func=add;class=WebGUI::Asset::Sku::Subscription", "icon": "http://www.webgui.org/extras/assets/small/subscription.gif"},
-                {"title": "Thingy Record", "href": "/etusivu?func=add;class=WebGUI::Asset::Sku::ThingyRecord", "icon": "http://www.webgui.org/extras/assets/small/thingyRecord.gif"},
-                {"title": "Utilities"},
-                {"title": "Asset Report", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::AssetReport", "icon": "http://www.webgui.org/extras/assets/small/assets.gif"},
-                {"title": "Carousel", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Carousel", "icon": "http://www.webgui.org/extras/assets/small/Carousel.png"},
-                {"title": "File", "href": "/etusivu?func=add;class=WebGUI::Asset::File", "icon": "http://www.webgui.org/extras/assets/small/file.gif"},
-                {"title": "HTTP Proxy", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::HttpProxy", "icon": "http://www.webgui.org/extras/assets/small/httpProxy.gif"},
-                {"title": "Image", "href": "/etusivu?func=add;class=WebGUI::Asset::File::Image", "icon": "http://www.webgui.org/extras/assets/small/file.gif"},
-                {"title": "Navigation", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::Navigation", "icon": "http://www.webgui.org/extras/assets/small/navigation.gif"},
-                {"title": "Redirect", "href": "/etusivu?func=add;class=WebGUI::Asset::Redirect", "icon": "http://www.webgui.org/extras/assets/small/redirect.gif"},
-                {"title": "Rich Edit", "href": "/etusivu?func=add;class=WebGUI::Asset::RichEdit", "icon": "http://www.webgui.org/extras/assets/small/richEdit.gif"},
-                {"title": "SQL Report", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::SQLReport", "icon": "http://www.webgui.org/extras/assets/small/sqlReport.gif"},
-                {"title": "Syndicated Content", "href": "/etusivu?func=add;class=WebGUI::Asset::Wobject::SyndicatedContent", "icon": "http://www.webgui.org/extras/assets/small/syndicatedContent.gif"},
-                {"title": "Template", "href": "/etusivu?func=add;class=WebGUI::Asset::Template", "icon": "http://www.webgui.org/extras/assets/small/template.gif"},
-                {"title": "Zip Archive", "href": "/etusivu?func=add;class=WebGUI::Asset::File::ZipArchive", "icon": "http://www.webgui.org/extras/assets/small/file.gif"}
-                
+                {
+                    "canAdd": "WebGUI::Asset",
+                    "category": "intranet",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/dashboard.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Dashboard",
+                    "isContainer": 1,
+                    "icon": "\/extras\/assets\/small\/dashboard.gif",
+                    "title": "Dashboard (beta)"
+                },
+                {
+                    "title": "MapPoint",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/iob.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::InOutBoard",
+                    "icon": "\/extras\/assets\/small\/iob.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "intranet"
+                },
+                {
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/multiSearch.gif",
+                    "category": "intranet",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/multiSearch.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::MultiSearch",
+                    "title": "MultiSearch"
+                },
+                {
+                    "title": "Project Manager (beta)",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/projManagement.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::ProjectManager",
+                    "icon": "\/extras\/assets\/small\/projManagement.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "intranet"
+                },
+                {
+                    "url": "func=add;className=WebGUI::Asset::Wobject::StockData",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/stockData.gif",
+                    "category": "intranet",
+                    "icon": "\/extras\/assets\/small\/stockData.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "title": "Stock Data"
+                },
+                {
+                    "title": "Thingy",
+                    "icon": "\/extras\/assets\/small\/thingy.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "intranet",
+                    "icon_full": "\/extras\/assets\/thingy.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Thingy"
+                },
+                {
+                    "title": "Time Tracker (beta)",
+                    "icon_full": "\/extras\/assets\/timetrack.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::TimeTracking",
+                    "icon": "\/extras\/assets\/small\/timetrack.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "intranet"
+                },
+                {
+                    "title": "User List",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::UserList",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/userlist.gif",
+                    "category": "intranet",
+                    "icon": "\/extras\/assets\/small\/userlist.gif",
+                    "canAdd": "WebGUI::Asset"
+                },
+                {
+                    "category": "intranet",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/weatherData.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::WeatherData",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/weatherData.gif",
+                    "title": "WeatherData"
+                }
             ]
+        },
+        {
+            "id": "prototypes",
+            "items": [
+                {
+                    "className": "WebGUI::Asset::Wobject::Collaboration",
+                    "icon": "\/extras\/assets\/small\/collaboration.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Collaboration;prototype=pbproto000000000000002",
+                    "title": "Request Tracker"
+                }
+            ],
+            "title": "Prototypes"
+        },
+        {
+            "items": [
+                {
+                    "url": "func=add;className=WebGUI::Asset::Sku::Donation",
+                    "icon_full": "\/extras\/assets\/Donation.gif",
+                    "uiLevel": 1,
+                    "category": "shop",
+                    "icon": "\/extras\/assets\/small\/Donation.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "title": "Donation"
+                },
+                {
+                    "title": "Event Manager",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::EventManagementSystem",
+                    "icon_full": "\/extras\/assets\/ems.gif",
+                    "uiLevel": 1,
+                    "category": "shop",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/ems.gif"
+                },
+                {
+                    "url": "func=add;className=WebGUI::Asset::Sku::FlatDiscount",
+                    "icon_full": "\/extras\/assets\/FlatDiscount.gif",
+                    "uiLevel": 1,
+                    "category": "shop",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/FlatDiscount.gif",
+                    "title": "Flat Discount Coupon"
+                },
+                {
+                    "title": "Product",
+                    "url": "func=add;className=WebGUI::Asset::Sku::Product",
+                    "icon_full": "\/extras\/assets\/product.gif",
+                    "uiLevel": 1,
+                    "category": "shop",
+                    "icon": "\/extras\/assets\/small\/product.gif",
+                    "canAdd": "WebGUI::Asset"
+                },
+                {
+                    "category": "shop",
+                    "icon": "\/extras\/assets\/small\/Shelf.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Shelf",
+                    "icon_full": "\/extras\/assets\/Shelf.gif",
+                    "uiLevel": 1,
+                    "title": "Shelf"
+                },
+                {
+                    "title": "Subscription",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/subscription.gif",
+                    "category": "shop",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/subscription.gif",
+                    "url": "func=add;className=WebGUI::Asset::Sku::Subscription"
+                },
+                {
+                    "icon_full": "\/extras\/assets\/thingyRecord.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::Sku::ThingyRecord",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/thingyRecord.gif",
+                    "category": "shop",
+                    "title": "Thingy Record"
+                },
+                {
+                    "title": "Wiki",
+                    "url": "func=add;className=WebGUI::Asset::Sku::Ad",
+                    "icon_full": "\/extras\/assets\/adsku.gif",
+                    "uiLevel": 1,
+                    "category": "shop",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/adsku.gif"
+                }
+            ],
+            "id": "shop",
+            "title": "Shop"
+        },
+        {
+            "items": [
+                {
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/assets.gif",
+                    "category": "utilities",
+                    "icon_full": "\/extras\/assets\/assets.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::AssetReport",
+                    "title": "Asset Report"
+                },
+                {
+                    "title": "Carousel",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/Carousel.png",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Carousel",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/Carousel.png",
+                    "category": "utilities"
+                },
+                {
+                    "canAdd": "WebGUI::Asset",
+                    "icon": null,
+                    "category": "utilities",
+                    "icon_full": "\/extras\/assets\/file.gif",
+                    "uiLevel": 1,
+                    "url": "func=add;className=WebGUI::Asset::File",
+                    "title": "File"
+                },
+                {
+                    "title": "HTTP Proxy",
+                    "icon_full": "\/extras\/assets\/httpProxy.gif",
+                    "uiLevel": 5,
+                    "url": "func=add;className=WebGUI::Asset::Wobject::HttpProxy",
+                    "icon": "\/extras\/assets\/small\/httpProxy.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "utilities"
+                },
+                {
+                    "title": "Image",
+                    "category": "utilities",
+                    "icon": null,
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::File::Image",
+                    "icon_full": "\/extras\/assets\/file.gif",
+                    "uiLevel": 1
+                },
+                {
+                    "fields": {
+                        
+                    },
+                    "title": "Navigation",
+                    "icon": "\/extras\/assets\/small\/navigation.gif",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/navigation.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::Navigation",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "utilities"
+                },
+                {
+                    "uiLevel": 9,
+                    "icon_full": "\/extras\/assets\/redirect.gif",
+                    "url": "func=add;className=WebGUI::Asset::Redirect",
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/redirect.gif",
+                    "category": "utilities",
+                    "title": "Redirect"
+                },
+                {
+                    "category": "utilities",
+                    "icon": "\/extras\/assets\/small\/richEdit.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::RichEdit",
+                    "uiLevel": 5,
+                    "icon_full": "\/extras\/assets\/richEdit.gif",
+                    "title": "Rich Edit"
+                },
+                {
+                    "canAdd": "WebGUI::Asset",
+                    "icon": "\/extras\/assets\/small\/sqlReport.gif",
+                    "category": "utilities",
+                    "uiLevel": 5,
+                    "icon_full": "\/extras\/assets\/sqlReport.gif",
+                    "url": "func=add;className=WebGUI::Asset::Wobject::SQLReport",
+                    "title": "SQL Report"
+                },
+                {
+                    "url": "func=add;className=WebGUI::Asset::Wobject::SyndicatedContent",
+                    "icon_full": "\/extras\/assets\/syndicatedContent.gif",
+                    "uiLevel": 6,
+                    "category": "utilities",
+                    "icon": "\/extras\/assets\/small\/syndicatedContent.gif",
+                    "canAdd": "WebGUI::Asset",
+                    "title": "Syndicated Content"
+                },
+                {
+                    "fields": {
+                        
+                    },
+                    "title": "Template",
+                    "icon": "\/extras\/assets\/small\/template.gif",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/template.gif",
+                    "url": "func=add;className=WebGUI::Asset::Template",
+                    "canAdd": "WebGUI::Asset",
+                    "category": "utilities"
+                },
+                {
+                    "title": "Zip Archive",
+                    "category": "utilities",
+                    "icon": null,
+                    "canAdd": "WebGUI::Asset",
+                    "url": "func=add;className=WebGUI::Asset::File::ZipArchive",
+                    "uiLevel": 1,
+                    "icon_full": "\/extras\/assets\/file.gif"
+                }
+            ],
+            "id": "utilities",
+            "title": "Utilities"
+        }
+    ],
+    "adminPlugins": [
+        {
+            "icon": "\/extras\/adminConsole\/activeSessions.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/activeSessions.gif",
+            "url": "^PageUrl(\"\",op=viewActiveSessions);",
+            "title": "Active Sessions"
+        },
+        {
+            "icon": "\/extras\/adminConsole\/addons.png",
+            "icon.small": "\/extras\/adminConsole\/small\/addons.png",
+            "url": "http:\/\/www.webgui.org\/addons",
+            "title": "Addons"
+        },
+        {
+            "icon": "\/extras\/adminConsole\/advertising.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/advertising.gif",
+            "url": "^PageUrl(\"\",op=manageAdSpaces);",
+            "title": "Advertising"
+        },
+        {
+            "url": "^PageUrl(\"\",op=assetHistory);",
+            "icon.small": "\/extras\/adminConsole\/small\/assetHistory.gif",
+            "icon": "\/extras\/adminConsole\/assetHistory.gif",
+            "title": "Asset History"
+        },
+        {
+            "icon.small": "\/extras\/adminConsole\/small\/assets.gif",
+            "icon": "\/extras\/adminConsole\/assets.gif",
+            "url": "^PageUrl(\"\",op=assetManager);",
+            "title": "Assets"
+        },
+        {
+            "title": "Cache",
+            "url": "^PageUrl(\"\",op=manageCache);",
+            "icon.small": "\/extras\/adminConsole\/small\/cache.gif",
+            "icon": "\/extras\/adminConsole\/cache.gif"
+        },
+        {
+            "title": "Clipboard",
+            "icon.small": "\/extras\/adminConsole\/small\/clipboard.gif",
+            "icon": "\/extras\/adminConsole\/clipboard.gif",
+            "url": "^PageUrl(\"\",func=manageClipboard);"
+        },
+        {
+            "title": "Content Filters",
+            "url": "^PageUrl(\"\",op=listReplacements);",
+            "icon": "\/extras\/adminConsole\/contentFilters.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/contentFilters.gif"
+        },
+        {
+            "title": "Content Profiling",
+            "url": "^PageUrl(\"\",func=manageMetaData);",
+            "icon": "\/extras\/adminConsole\/contentProfiling.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/contentProfiling.gif"
+        },
+        {
+            "title": "Databases",
+            "url": "^PageUrl(\"\",op=listDatabaseLinks);",
+            "icon": "\/extras\/adminConsole\/databases.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/databases.gif"
+        },
+        {
+            "url": "^PageUrl(\"\",op=filePump);",
+            "icon": "\/extras\/adminConsole\/filePump.png",
+            "icon.small": "\/extras\/adminConsole\/small\/filePump.png",
+            "title": "File Pump"
+        },
+        {
+            "icon": "\/extras\/adminConsole\/graphics.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/graphics.gif",
+            "url": "^PageUrl(\"\",op=listGraphicsOptions);",
+            "title": "Graphics"
+        },
+        {
+            "title": "Groups",
+            "icon": "\/extras\/adminConsole\/groups.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/groups.gif",
+            "url": "^PageUrl(\"\",op=listGroups);"
+        },
+        {
+            "title": "Inbox",
+            "url": "^PageUrl(\"\",op=viewInbox);",
+            "icon.small": "\/extras\/adminConsole\/small\/inbox.gif",
+            "icon": "\/extras\/adminConsole\/inbox.gif"
+        },
+        {
+            "icon.small": "\/extras\/adminConsole\/small\/ldap.gif",
+            "icon": "\/extras\/adminConsole\/ldap.gif",
+            "url": "^PageUrl(\"\",op=listLDAPLinks);",
+            "title": "LDAP Connections"
+        },
+        {
+            "url": "^PageUrl(\"\",op=viewLoginHistory);",
+            "icon": "\/extras\/adminConsole\/loginHistory.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/loginHistory.gif",
+            "title": "Login History"
+        },
+        {
+            "title": "Passive Analytics",
+            "url": "^PageUrl(\"\",op=passiveAnalytics;func=editRuleflow);",
+            "icon.small": "\/extras\/adminConsole\/small\/passiveAnalytics.png",
+            "icon": "\/extras\/adminConsole\/passiveAnalytics.png"
+        },
+        {
+            "title": "Scheduler",
+            "icon": "\/extras\/adminConsole\/cron.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/cron.gif",
+            "url": "^PageUrl(\"\",op=manageCron);"
+        },
+        {
+            "title": "Settings",
+            "url": "^PageUrl(\"\",op=editSettings);",
+            "icon.small": "\/extras\/adminConsole\/small\/settings.gif",
+            "icon": "\/extras\/adminConsole\/settings.gif"
+        },
+        {
+            "title": "Shop",
+            "url": "^PageUrl(\"\",shop=admin);",
+            "icon.small": "\/extras\/adminConsole\/small\/shop.gif",
+            "icon": "\/extras\/adminConsole\/shop.gif"
+        },
+        {
+            "url": "^PageUrl(\"\",op=spectreStatus);",
+            "icon": "\/extras\/adminConsole\/spectre.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/spectre.gif",
+            "title": "Spectre"
+        },
+        {
+            "icon.small": "\/extras\/adminConsole\/small\/help.gif",
+            "icon": "\/extras\/adminConsole\/help.gif",
+            "url": "^PageUrl(\"\",op=viewHelpIndex);",
+            "title": "Template Help"
+        },
+        {
+            "title": "Trash",
+            "url": "^PageUrl(\"\",func=manageTrash);",
+            "icon.small": "\/extras\/adminConsole\/small\/trash.gif",
+            "icon": "\/extras\/adminConsole\/trash.gif"
+        },
+        {
+            "title": "User Profiling",
+            "icon": "\/extras\/adminConsole\/userProfiling.gif",
+            "icon.small": "\/extras\/adminConsole\/small\/userProfiling.gif",
+            "url": "^PageUrl(\"\",op=editProfileSettings);"
+        },
+        {
+            "title": "Users",
+            "url": "^PageUrl(\"\",op=listUsers);",
+            "icon.small": "\/extras\/adminConsole\/small\/users.gif",
+            "icon": "\/extras\/adminConsole\/users.gif"
+        },
+        {
+            "icon.small": "\/extras\/adminConsole\/small\/versionTags.gif",
+            "icon": "\/extras\/adminConsole\/versionTags.gif",
+            "url": "^PageUrl(\"\",op=manageVersions);",
+            "title": "Version Tags"
+        },
+        {
+            "title": "Workflow",
+            "icon.small": "\/extras\/adminConsole\/small\/workflow.gif",
+            "icon": "\/extras\/adminConsole\/workflow.gif",
+            "url": "^PageUrl(\"\",op=manageWorkflows);"
         }
     ]
 }

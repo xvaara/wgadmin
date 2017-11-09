@@ -1,15 +1,26 @@
 <template>
   <div class="bar">
+    
 
-    <div class="dropdown" v-for="item in menuData.items">
-      <button class="dropbtn"><icon :name="item.icon"></icon> {{ item.title }}</button>
+    <div class="dropdown" v-if="config.adminPlugins">
+      <button class="dropbtn"><icon name="cog"></icon>Console</button>
       <div class="dropdown-content">
-        <span v-for="subitem in item.items">
-          <a class="link" :href="subitem.href" v-if="subitem.href"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
+        <span v-for="subitem in config.adminPlugins">
+          <a class="link" :href="subitem.url" v-if="subitem.url"><img :src="subitem['icon.small']" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
           <p class="dropdown-title" v-else> {{ subitem.title }}</p>
         </span>
       </div>
     </div>
+
+    <div class="dropdown" v-if="config.newContentTabs" v-for="item in config.newContentTabs">
+        <button class="dropbtn"><icon :name="item.icon || 'plus'"></icon> {{ item.title }}</button>      <div class="dropdown-content">
+        <span v-for="subitem in item.items">
+          <a class="link" :href="subitem.url" v-if="subitem.url"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
+          <p class="dropdown-title" v-else> {{ subitem.title }}</p>
+        </span>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -19,6 +30,7 @@ const menuData = require('@/menu.json')
 
 export default {
   name: 'AdminPanels',
+  props: ['config'],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
@@ -68,6 +80,7 @@ export default {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    overflow: scroll;
 }
 
 /* Links inside the dropdown */
@@ -94,6 +107,7 @@ export default {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    overflow: scroll;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -101,5 +115,4 @@ export default {
     background-color: #3e8e41;
 }
 </style>
-<style>
-</style>
+
