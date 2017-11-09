@@ -21,7 +21,7 @@ Vue.use(VModal)
 
 var body = document.body
 var wrapper = document.createElement('span')
-wrapper.className = 'adminWrapper'
+wrapper.id = 'adminViewFrame'
 
 wrapper.innerHTML = body.innerHTML
 body.innerHTML = wrapper.outerHTML
@@ -30,8 +30,39 @@ var div = document.createElement('div')
 div.id = 'app'
 document.body.appendChild(div)
 
+var div2 = document.createElement('div')
+div2.id = 'versionTag'
+document.body.appendChild(div2)
+
+var div3 = document.createElement('div')
+div3.id = 'tabBar'
+document.body.appendChild(div3)
+
+var loadScript = (url, id = 'foo') => {
+  var s = document.createElement('script')
+  s.type = 'text/javascript'
+  s.src = url
+  s.id = id
+  document.body.appendChild(s)
+}
+loadScript('/extras/yui/build/utilities/utilities.js')
+loadScript('/extras/yui/build/element/element-debug.js')
+loadScript('/extras/yui/build/json/json-debug.js')
+loadScript('/extras/yui/build/tabview/tabview-debug.js')
+loadScript('/extras/yui-webgui/build/i18n/i18n.js')
+loadScript('/extras/admin/admin.js', 'adminScript')
+
+// window.YAHOO.util.Event.onDOMReady(function () {
+document.getElementById('adminScript').addEventListener('load', () => {
+  window.admin = new window.WebGUI.Admin({
+    homeUrl: '/home',
+    assetTypes: {'37/64': null}
+  })
+  document.body.className = 'yui-skin-sam'
+})
+
 /* eslint-disable no-new */
-window.admin = new Vue({
+window.adminBar = new Vue({
   el: '#app',
   template: '<App/>',
   components: { App }

@@ -3,7 +3,7 @@
   <div ref="adminElement" id="adminElement">
     <div ref="dragAdmin" id="dragAdmin"><icon name="arrows"></icon></div>
     <div class="adminButton" @click="showBar = !showBar">ADMIN</div>
-    <panels v-if="showBar" :config="config" :clipboard="clipboard" :versionTags="versionTags"></panels>
+    <panels v-if="showBar" :config="config" :clipboard="clipboard" :versionTags="versionTags" :currentAsset="currentAsset"></panels>
   </div>
     <modal name="edit" width="80%" height="80%" :resizable="true">
       <iframe src="http://mhx.fi/wgadmin/edit.html" frameborder="0" width="100%" height="100%"></iframe>
@@ -28,7 +28,8 @@ export default {
       showBar: false,
       config: {},
       clipboard: [],
-      versionTags: []
+      versionTags: [],
+      currentAsset: {}
     }
   },
   mounted () {
@@ -39,17 +40,28 @@ export default {
     window.adminEdit = () => {
       this.$modal.show('edit')
     }
-    axios.get('/?op=admin&json=1').then((res) => {
-      this.config = res.data
-    })
-    axios.get('/?op=admin;method=getClipboard').then((res) => {
-      this.clipboard = res.data
-    })
-    axios.get('/?op=admin&method=getVersionTags').then((res) => {
-      this.versionTags = res.data
-    })
+    this.getAdminData()
   },
   methods: {
+    getAdminData () {
+      axios.get('/?op=admin&json=1').then((res) => {
+        this.config = res.data
+      })
+      axios.get('/?op=admin;method=getClipboard').then((res) => {
+        this.clipboard = res.data
+      })
+      axios.get('/?op=admin&method=getVersionTags').then((res) => {
+        this.versionTags = res.data
+      })
+      if (window.WG) {
+        if (window.WG.currentAssetId) {
+          axios.get('/?op=admin;method=getAssetData;assetId=' + window.WG.currentAssetId).then((res) => {
+            window.WG.currentAssetDef = res.data
+            this.currentAsset = res.data
+          })
+        }
+      }
+    },
     mouseUp () {
       window.removeEventListener('mousemove', this.divMove, true)
     },
