@@ -2,8 +2,9 @@
 
 > New admin interface for WebGUI CMS
 
-## Build Setup
+## Dev Setup
 
+### Install node modules and start webgui in docker
 ``` bash
 # install dependencies
 npm install
@@ -12,15 +13,18 @@ npm install
 docker run -i -p 80:80 -t scrottie/webgui8:latest
 ```
 
-# add the js to a style template
+### add the js to a style template
 ``` html
 <script src="http://localhost:8080/_assets/app.js"></script>
 ```
 
+### Start the development server
 ``` bash
 # serve with hot reload at localhost:8080
 npm run dev
 ```
+
+## Building dist files
 
 ``` bash
 # build for production with minification
