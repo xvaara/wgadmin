@@ -12,6 +12,26 @@
       </div>
     </div>
 
+    <div class="dropdown" v-if="versionTags">
+      <button class="dropbtn"><icon name="cog"></icon>Versiontags</button>
+      <div class="dropdown-content">
+        <span v-for="subitem in versionTags">
+          <a class="link" :href="subitem.joinUrl"><img :src="subitem['icon']" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.name }}</a>
+          <a class="link" :href="subitem.editUrl">[edit]</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="dropdown" v-if="clipboard">
+      <button class="dropbtn"><icon name="cog"></icon>Clipboard</button>
+      <div class="dropdown-content">
+        <span v-for="subitem in clipboard">
+          <a class="link" :href="subitem.url" v-if="subitem.url"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
+          <p class="dropdown-title" v-else> {{ subitem.title }}</p>
+        </span>
+      </div>
+    </div>
+
     <div class="dropdown" v-if="config.newContentTabs" v-for="item in config.newContentTabs">
         <button class="dropbtn"><icon :name="item.icon || 'plus'"></icon> {{ item.title }}</button>      <div class="dropdown-content">
         <span v-for="subitem in item.items">
@@ -30,7 +50,7 @@ const menuData = require('@/menu.json')
 
 export default {
   name: 'AdminPanels',
-  props: ['config'],
+  props: ['config', 'clipboard', 'versionTags'],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
