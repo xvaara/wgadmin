@@ -58,11 +58,6 @@ export default {
     }
   },
   created () {
-    var elems = document.getElementsByClassName('adminOn')
-    var i = elems.length
-    while (i--) {
-      elems[i].style.display = 'block'
-    }
     var YAHOO = window.YAHOO
     var getWebguiProperty = window.getWebguiProperty
     var self = this
@@ -139,6 +134,15 @@ export default {
     window.admin.tabBar = new window.YAHOO.widget.TabView('tabBar')
     window.admin.currentAssetDef = this.currentAsset
     window.frames['view'] = window
+    setTimeout(() => {
+      this.attachEdit()
+    }, 2000)
+    setTimeout(() => {
+      this.attachEdit()
+    }, 4000)
+    setTimeout(() => {
+      this.attachEdit()
+    }, 6000)
   },
   destroyed () {
     var elems = document.getElementsByClassName('wg-admin-toolbar')
@@ -158,6 +162,18 @@ export default {
     paste (assetId) {
       window.admin.pasteAsset(assetId)
       this.parent.loadAdminData()
+    },
+    attachEdit () {
+      var elems = document.querySelectorAll('.wg-admin-toolbar a')
+      var i = elems.length
+      while (i--) {
+        elems[i].addEventListener('click', function (event) {
+          event.preventDefault()
+          event.stopPropagation()
+          window.adminEdit(event.target.href)
+          return false
+        })
+      }
     }
   }
 }

@@ -4,15 +4,15 @@
     <div ref="dragAdmin" id="dragAdmin"><icon name="arrows"></icon></div>
     <div class="adminButton" @click.prevent="showBar = !showBar">ADMIN</div>
     <panels v-if="showBar" :config="config" :clipboard="clipboard" :versionTags="versionTags" :currentAsset="currentAsset"></panels>
+    <edit-window></edit-window>
   </div>
-    <modal name="edit" width="80%" height="80%" :resizable="true">
-      <iframe src="http://mhx.fi/wgadmin/edit.html" frameborder="0" width="100%" height="100%"></iframe>
-    </modal>
+
     </span>
 </template>
 
 <script>
 import Panels from './components/Panels'
+import EditWindow from './components/EditWindow.vue'
 
 import axios from 'Axios'
 
@@ -21,7 +21,8 @@ var pos = {}
 export default {
   name: 'Admin',
   components: {
-    Panels
+    Panels,
+    EditWindow
   },
   data () {
     return {
@@ -37,8 +38,8 @@ export default {
     window.addEventListener('mouseup', this.mouseUp, false)
     this.$refs.adminElement.style.top = '60px'
     this.$refs.adminElement.style.left = '0px'
-    window.adminEdit = () => {
-      this.$modal.show('edit')
+    window.adminEdit = (url) => {
+      this.$modal.show('edit-window', {src: url})
     }
     this.getAdminData()
   },
