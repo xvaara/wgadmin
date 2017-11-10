@@ -35,7 +35,7 @@
     <div class="dropdown" v-if="config.newContentTabs" v-for="item in config.newContentTabs">
         <button class="dropbtn"><icon :name="item.icon || 'plus'"></icon> {{ item.title }}</button>      <div class="dropdown-content">
         <span v-for="subitem in item.items">
-          <a class="link" :href="'?' + subitem.url" v-if="subitem.url"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
+          <a class="link" :href="'?' + subitem.url" @click.prevent="adminEdit('?' + subitem.url)" v-if="subitem.url"><img :src="subitem.icon" style="border: 0px; vertical-align: middle;" alt="icon"> {{ subitem.title }}</a>
           <p class="dropdown-title" v-else> {{ subitem.title }}</p>
         </span>
       </div>
@@ -162,6 +162,9 @@ export default {
     paste (assetId) {
       window.admin.pasteAsset(assetId)
       this.parent.loadAdminData()
+    },
+    adminEdit (url) {
+      window.adminEdit(url)
     },
     attachEdit () {
       var elems = document.querySelectorAll('.wg-admin-toolbar a')
