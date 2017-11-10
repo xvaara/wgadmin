@@ -5,6 +5,7 @@
     <div class="adminButton" @click.prevent="showBar = !showBar">ADMIN</div>
     <panels v-if="showBar" :config="config" :clipboard="clipboard" :versionTags="versionTags" :currentAsset="currentAsset"></panels>
     <edit-window></edit-window>
+    <tree-window></tree-window>
   </div>
 
     </span>
@@ -13,6 +14,7 @@
 <script>
 import Panels from './components/Panels'
 import EditWindow from './components/EditWindow.vue'
+import TreeWindow from './components/TreeWindow.vue'
 
 import axios from 'Axios'
 
@@ -22,7 +24,8 @@ export default {
   name: 'Admin',
   components: {
     Panels,
-    EditWindow
+    EditWindow,
+    TreeWindow
   },
   data () {
     return {

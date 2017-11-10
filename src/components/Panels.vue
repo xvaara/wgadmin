@@ -1,7 +1,7 @@
 <template>
   <div class="bar">
     
-
+    <button @click.prevent="showTree()">Tree</button>
     <div class="dropdown" v-if="config.adminPlugins">
       <button class="dropbtn"><icon name="cog"></icon>Console</button>
       <div class="dropdown-content">
@@ -165,6 +165,9 @@ export default {
     },
     adminEdit (url) {
       window.adminEdit(url)
+    },
+    showTree () {
+      this.$modal.show('tree-window', {src: this.currentAsset.url})
     },
     attachEdit () {
       var elems = document.querySelectorAll('.wg-admin-toolbar a')
